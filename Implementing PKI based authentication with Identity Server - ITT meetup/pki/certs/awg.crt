@@ -1,0 +1,85 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 1 (0x1)
+        Signature Algorithm: sha1WithRSAEncryption
+        Issuer: DC=org, DC=iShare, O=iShare Inc, OU=iShare Signing CA, CN=iShare Signing CA
+        Validity
+            Not Before: May  6 20:51:43 2020 GMT
+            Not After : May  6 20:51:43 2022 GMT
+        Subject: DC=org, DC=iShare, DC=iShare, O=iShare Inc, OU=iShare Signing CA, CN=Awesome Gifts App
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                RSA Public-Key: (2048 bit)
+                Modulus:
+                    00:f3:cb:a8:13:9a:6f:a0:23:a3:c1:05:54:f8:ca:
+                    f0:3f:24:b8:7c:1c:62:6d:77:e1:5c:8a:02:79:20:
+                    3b:ae:25:14:8e:ae:d8:18:6e:75:18:38:dd:b5:98:
+                    44:f0:82:77:b0:23:16:20:14:a1:7f:bf:60:56:e7:
+                    70:69:ad:74:cf:bf:15:71:35:fc:24:1c:48:31:c0:
+                    55:ce:c3:e7:f6:2d:54:a6:8b:61:21:a4:94:f1:67:
+                    bf:85:65:2e:be:2b:67:ee:1d:4e:5f:72:bf:2e:b9:
+                    50:ac:b6:11:74:d4:75:68:6d:e4:0e:7a:ca:c2:89:
+                    0e:f5:f0:b4:ce:c6:01:35:bd:50:fc:36:06:9b:0d:
+                    9a:1e:f1:28:47:b5:e7:51:dd:1a:71:60:6d:2a:6f:
+                    ed:41:1c:e8:90:10:a4:bf:87:eb:1d:8b:10:3a:5a:
+                    4e:27:0b:6a:41:fb:63:a7:ae:df:bd:e3:60:9e:23:
+                    bc:b8:0f:80:0d:4c:49:ef:d3:d5:1b:7d:91:a8:c0:
+                    16:d1:9b:43:46:cb:7d:00:39:aa:08:78:c9:b3:78:
+                    f1:29:f8:4d:fc:28:1c:70:8c:f5:be:46:10:8d:f0:
+                    4e:23:8e:38:97:70:ae:c3:2d:3c:70:30:9f:cf:ab:
+                    6f:28:99:1a:a0:d2:38:af:4e:f0:b9:62:fc:dc:56:
+                    03:db
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Key Usage: critical
+                Digital Signature, Non Repudiation, Key Encipherment
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            X509v3 Subject Key Identifier: 
+                B5:3A:95:8F:C0:2D:EC:F0:F9:85:89:A8:8E:D0:EE:FE:D3:CC:BB:69
+            X509v3 Authority Key Identifier: 
+                keyid:7C:B8:E3:0A:9F:7B:DF:FE:21:82:45:C5:4A:FC:47:FF:14:8C:D9:EB
+
+            X509v3 Subject Alternative Name: 
+                DNS:serviceprovider
+    Signature Algorithm: sha1WithRSAEncryption
+         a9:63:39:2f:ba:85:a4:9b:66:49:a4:83:df:32:b8:7f:72:f7:
+         b1:28:f2:e7:d4:67:da:c2:70:75:e3:dd:ca:b4:74:33:8f:8f:
+         56:b8:72:8b:e5:05:7c:15:7a:e7:a4:4c:51:3b:16:62:e8:30:
+         da:fb:7f:71:4a:56:4c:22:1c:ae:07:b7:9e:91:55:db:a6:60:
+         c1:aa:12:28:b6:4f:51:5d:f2:c0:5d:df:92:76:b8:f5:c1:92:
+         d0:c4:22:01:d8:96:0f:2c:b6:04:15:e1:12:2b:0c:9b:e4:00:
+         f2:66:5a:da:9f:02:dc:b9:ed:5c:b1:72:ff:6d:4c:10:05:d0:
+         c6:15:21:52:6a:6a:d3:77:95:bc:9e:5c:3f:0e:b1:e2:a1:32:
+         86:22:7a:03:a5:cc:ea:15:96:b5:9f:45:6a:33:c8:35:57:81:
+         71:75:f5:80:b9:ae:df:73:3e:5c:c8:1d:93:f8:80:b5:d1:60:
+         07:91:6b:b9:2b:38:36:48:7f:6e:59:54:b8:a1:3c:ff:28:4a:
+         7a:22:70:c9:18:a0:63:a8:ad:34:03:51:03:82:dd:ef:b8:09:
+         0c:b2:c0:c2:65:c6:93:56:55:94:e2:16:49:49:79:9e:da:cc:
+         bd:a6:8d:77:e1:0c:10:3a:e8:49:05:c7:28:33:e2:e0:22:26:
+         96:9b:be:4a
+-----BEGIN CERTIFICATE-----
+MIIEATCCAumgAwIBAgIBATANBgkqhkiG9w0BAQUFADB6MRMwEQYKCZImiZPyLGQB
+GRYDb3JnMRYwFAYKCZImiZPyLGQBGRYGaVNoYXJlMRMwEQYDVQQKDAppU2hhcmUg
+SW5jMRowGAYDVQQLDBFpU2hhcmUgU2lnbmluZyBDQTEaMBgGA1UEAwwRaVNoYXJl
+IFNpZ25pbmcgQ0EwHhcNMjAwNTA2MjA1MTQzWhcNMjIwNTA2MjA1MTQzWjCBkjET
+MBEGCgmSJomT8ixkARkWA29yZzEWMBQGCgmSJomT8ixkARkWBmlTaGFyZTEWMBQG
+CgmSJomT8ixkARkWBmlTaGFyZTETMBEGA1UECgwKaVNoYXJlIEluYzEaMBgGA1UE
+CwwRaVNoYXJlIFNpZ25pbmcgQ0ExGjAYBgNVBAMMEUF3ZXNvbWUgR2lmdHMgQXBw
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA88uoE5pvoCOjwQVU+Mrw
+PyS4fBxibXfhXIoCeSA7riUUjq7YGG51GDjdtZhE8IJ3sCMWIBShf79gVudwaa10
+z78VcTX8JBxIMcBVzsPn9i1UpothIaSU8We/hWUuvitn7h1OX3K/LrlQrLYRdNR1
+aG3kDnrKwokO9fC0zsYBNb1Q/DYGmw2aHvEoR7XnUd0acWBtKm/tQRzokBCkv4fr
+HYsQOlpOJwtqQftjp67fveNgniO8uA+ADUxJ79PVG32RqMAW0ZtDRst9ADmqCHjJ
+s3jxKfhN/CgccIz1vkYQjfBOI444l3Cuwy08cDCfz6tvKJkaoNI4r07wuWL83FYD
+2wIDAQABo3kwdzAOBgNVHQ8BAf8EBAMCBeAwCQYDVR0TBAIwADAdBgNVHQ4EFgQU
+tTqVj8At7PD5hYmojtDu/tPMu2kwHwYDVR0jBBgwFoAUfLjjCp973/4hgkXFSvxH
+/xSM2eswGgYDVR0RBBMwEYIPc2VydmljZXByb3ZpZGVyMA0GCSqGSIb3DQEBBQUA
+A4IBAQCpYzkvuoWkm2ZJpIPfMrh/cvexKPLn1GfawnB1493KtHQzj49WuHKL5QV8
+FXrnpExROxZi6DDa+39xSlZMIhyuB7eekVXbpmDBqhIotk9RXfLAXd+Sdrj1wZLQ
+xCIB2JYPLLYEFeESKwyb5ADyZlranwLcue1csXL/bUwQBdDGFSFSamrTd5W8nlw/
+DrHioTKGInoDpczqFZa1n0VqM8g1V4FxdfWAua7fcz5cyB2T+IC10WAHkWu5Kzg2
+SH9uWVS4oTz/KEp6InDJGKBjqK00A1EDgt3vuAkMssDCZcaTVlWU4hZJSXme2sy9
+po134QwQOuhJBccoM+LgIiaWm75K
+-----END CERTIFICATE-----

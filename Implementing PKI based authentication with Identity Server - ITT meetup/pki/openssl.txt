@@ -1,0 +1,129 @@
+openssl req -in ca\root-ca.csr -noout -text
+openssl x509 -in ca\root-ca.crt -text -noout
+git add . && git commit -m  ""
+
+md ca\root-ca\private ca\root-ca\db crl certs^
+ && copy NUL ca\root-ca\db\root-ca.db^
+ && copy NUL ca\root-ca\db\root-ca.db.attr^
+ && echo 01 > ca\root-ca\db\root-ca.crt.srl^
+ && echo 01 > ca\root-ca\db\root-ca.crl.srl
+
+
+openssl req -new^
+ -config etc\root-ca.conf^
+ -out ca\root-ca.csr^
+ -keyout ca\root-ca\private\root-ca.key
+
+openssl ca -selfsign^
+ -config etc\root-ca.conf^
+ -in ca\root-ca.csr^
+ -out ca\root-ca.crt^
+ -extensions root_ca_ext
+
+md ca\signing-ca\private ca\signing-ca\db^
+ && copy NUL ca\signing-ca\db\signing-ca.db^
+ && copy NUL ca\signing-ca\db\signing-ca.db.attr^
+ && echo 01 > ca\signing-ca\db\signing-ca.crt.srl^
+ && echo 01 > ca\signing-ca\db\signing-ca.crl.srl
+
+openssl req -new^
+ -config etc\signing-ca.conf^
+ -out ca\signing-ca.csr^
+ -keyout ca\signing-ca\private\signing-ca.key
+
+openssl ca^
+ -config etc\root-ca.conf^
+ -in ca\signing-ca.csr^
+ -out ca\signing-ca.crt^
+ -extensions signing_ca_ext
+
+openssl req -new^
+ -config etc\provider.conf^
+ -out certs\awg.csr^
+ -keyout certs\awg.key
+
+1. Domain Component         (eg, com)       []:org
+2. Domain Component         (eg, company)   []:iShare
+3. Domain Component         (eg, pki)       []:iShare
+4. Organization Name        (eg, company)   []:iShare Inc
+5. Organizational Unit Name (eg, section)   []:iShare Signing CA
+6. Common Name              (eg, full name) []:Awesome Gifts App
+7. Email Address  
+
+openssl req -in certs\awg.csr -noout -text
+openssl ca^
+ -config etc\signing-ca.conf^
+ -in certs\awg.csr^
+ -out certs\awg.crt^
+ -extensions provider_ext
+
+openssl req -new^
+ -config etc\provider.conf^
+ -out certs\dod.csr^
+ -keyout certs\dod.key
+
+1. Domain Component         (eg, com)       []:org
+2. Domain Component         (eg, company)   []:iShare
+3. Domain Component         (eg, pki)       []:iShare
+4. Organization Name        (eg, company)   []:iShare Inc
+5. Organizational Unit Name (eg, section)   []:iShare Signing CA
+6. Common Name              (eg, full name) []:Door Delivery App
+7. Email Address  
+
+openssl req -in certs\dod.csr -noout -text
+openssl ca^
+ -config etc\signing-ca.conf^
+ -in certs\dod.csr^
+ -out certs\dod.crt^
+ -extensions provider_ext
+
+SET DNS 
+openssl req -new^
+ -config etc\provider.conf^
+ -out certs\wng.csr^
+ -keyout certs\wng.key
+
+1. Domain Component         (eg, com)       []:org
+2. Domain Component         (eg, company)   []:iShare
+3. Domain Component         (eg, pki)       []:iShare
+4. Organization Name        (eg, company)   []:iShare Inc
+5. Organizational Unit Name (eg, section)   []:iShare Signing CA
+6. Common Name              (eg, full name) []:Warehouse NG App
+7. Email Address  
+
+openssl req -in certs\wng.csr -noout -text
+openssl ca^
+ -config etc\signing-ca.conf^
+ -in certs\wng.csr^
+ -out certs\wng.crt^
+ -extensions provider_ext
+
+openssl req -new^
+ -config etc\provider.conf^
+ -out certs\shd.csr^
+ -keyout certs\shd.key
+
+1. Domain Component         (eg, com)       []:org
+2. Domain Component         (eg, company)   []:iShare
+3. Domain Component         (eg, pki)       []:iShare
+4. Organization Name        (eg, company)   []:iShare Inc
+5. Organizational Unit Name (eg, section)   []:iShare Signing CA
+6. Common Name              (eg, full name) []:Same Hour Delivery App
+7. Email Address  
+--------------------------------------------------
+openssl req -in certs\shd.csr -noout -text
+openssl ca^
+ -config etc\signing-ca.conf^
+ -in certs\shd.csr^
+ -out certs\shd.crt^
+ -extensions provider_ext
+
+openssl ca^
+ -config etc/signing-ca.conf^
+ -revoke ca/signing-ca/02.pem^
+ -crl_reason superseded
+
+openssl ca -gencrl^
+ -config etc\signing-ca.conf^
+ -out crl\signing-ca.crl
+
